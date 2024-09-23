@@ -1,0 +1,148 @@
+.results {
+    background-image: url('../images/dist/folders.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: $white;
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        @include adaptiveValue("margin-bottom", 85, 20);
+    }
+
+    &__title {
+        color: $brown4;
+        font-size: 40px;
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        @include adaptiveValue("padding-left", 100, 20);
+        @include adaptiveValue("padding-right", 100, 20);
+
+        @media (max-width: 1200px) {
+            font-size: 36px;
+        }
+
+        @media (max-width: 992px) {
+            font-size: 33px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 29px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 26px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -30%;
+            right: 0;
+            height: 2px;
+            width: 100%;
+            background-color: $white;
+        }
+    }
+
+    &__items {
+        margin-bottom: 110px;
+        max-width: 750px;
+        @include adaptiveValue("margin-bottom", 110, 20);
+        padding-left: 30px;
+        gap: 5px;
+        display: grid;
+
+        @media (max-width: 768px) {
+            max-width: 450px;
+        }
+    }
+
+    &__item {
+        color: $white;
+        @include line-height(20, 32, px, );
+
+        @media (max-width: 1200px) {
+            font-size: 19px;
+        }
+
+        @media (max-width: 992px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 17px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 16px;
+        }
+    }
+
+    &__link {
+        color: $blue;
+        text-decoration: revert;
+        transition: color 0.5s;
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+            color: $ac;
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+
+    &__text {
+        margin-bottom: 100px;
+        @include adaptiveValue("margin-bottom", 100, 20);
+    }
+
+    &__text p {
+        color: $brown4;
+        font-weight: 700;
+        font-size: 24px;
+        max-width: 545px;
+        margin-bottom: 15px;
+    }
+
+    &__text span {
+        color: $gray2;
+        @include line-height(20, 32, px, );
+
+        @media (max-width: 1200px) {
+            font-size: 19px;
+        }
+
+        @media (max-width: 992px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 17px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 16px;
+        }
+    }
+
+    &__video {
+        max-width: 770px;
+        height: 445px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+        @media (max-width: 576px) {
+            height: 350px;
+        }
+    }
+}

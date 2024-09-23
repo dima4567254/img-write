@@ -1,0 +1,125 @@
+/*секция в блоге и блоке 2 и еще где то секция с чек кнопками*/
+.recent-posts {
+    @media (max-width: 992px) {
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: $default;
+        text-transform: uppercase;
+        letter-spacing: -0.8px;
+        position: relative;
+
+        @media (max-width: 992px) {
+            text-align: center;
+        }
+
+        @media (max-width: 575px) {
+            margin-bottom: 20px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            width: 40px;
+            height: 3px;
+            background-color: $blue4;
+            margin-left: 15px;
+        }
+    }
+
+    &__items {
+        @media (max-width: 992px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        @media (max-width: 992px) {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 768px) {
+            margin-top: 10px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+    }
+
+    &__content {
+        flex: 0 0 67%;
+
+        @media (max-width: 992px) {
+            flex: 0 0 50%;
+        }
+
+    }
+
+    &__box {
+        margin-right: 20px;
+        transition: color 0.5s;
+        display: flex;
+        flex: 0 0 25%;
+
+        @media (max-width: 992px) {
+            flex: 0 0 20%;
+        }
+    }
+
+    &__img {
+        width: 70px;
+        height: 70px;
+        transition: opacity 0.5s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__text {
+        font-family: $rubik;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        transition: color 0.5s;
+        letter-spacing: 0;
+        display: inline-block;
+    }
+
+    &__calendar {
+        font-size: 12px;
+        font-family: $rubik;
+        font-weight: 400;
+        color: $grey6;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        transition: color 0.5s;
+        @include line-clamp-inline(2);
+    }
+
+    &__svg {
+        margin-right: 5px;
+        vertical-align: text-top;
+    }
+}

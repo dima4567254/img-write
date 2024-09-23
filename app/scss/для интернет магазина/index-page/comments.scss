@@ -1,0 +1,311 @@
+/*blog-detalis*/
+.comments {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @media (max-width: 575px) {
+            display: block;
+        }
+    }
+
+    &__inner {
+        display: flex;
+
+        @media (max-width: 575px) {
+            display: block;
+        }
+    }
+
+    &__images {
+        width: 75px;
+        height: 75px;
+        object-fit: cover;
+        margin-right: 30px;
+
+        @media (max-width: 575px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__name {
+        @media (max-width: 575px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__name p {
+        margin-bottom: 15px;
+    }
+
+    &__top {
+        padding: 25px 20px 25px 0px;
+        border-top: 2px solid $grey7;
+        border-bottom: 2px solid $grey7;
+        margin-bottom: 60px;
+
+        @media (max-width: 992px) {
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 35px;
+        }
+
+        @media (max-width: 575px) {
+            padding: 20px 0px 0px 0px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        max-width: 300px;
+        font-family: $rubik;
+    }
+
+    &__top p {
+        font-size: 18px;
+        line-height: 1.3;
+        font-family: $rubik;
+        font-weight: 500;
+        color: $black3;
+        letter-spacing: 0px;
+        margin-bottom: 10px;
+    }
+
+    &__top span {
+        font-weight: 400;
+        color: $grey2;
+        letter-spacing: 0;
+    }
+
+    &__info p {
+        margin-right: 20px;
+        letter-spacing: -1.4px;
+    }
+
+    &__tags {
+        display: flex;
+        font-family: $rubik;
+        font-weight: 400;
+        align-items: center;
+        margin-bottom: 10px;
+
+        p {
+            margin-right: 30px;
+            letter-spacing: -0.7px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            max-width: 100px;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+
+        a {
+            color: $grey9;
+            margin-bottom: 10px;
+            letter-spacing: 0;
+        }
+    }
+
+    &__share {
+        display: flex;
+        font-family: $rubik;
+        font-weight: 400;
+        align-items: center;
+
+        a {
+            margin-right: 25px;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 250px;
+        line-height: 1.2;
+        outline-offset: 5px;
+        transition: color 0.5s;
+
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+
+        &:hover {
+            color: $ac;
+
+            path {
+                fill: $ac;
+
+            }
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-family: $rubik;
+        color: $title;
+        margin-bottom: 60px;
+        @include line-clamp-box(3);
+
+        @media (max-width: 992px) {
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 35px;
+        }
+
+        @media (max-width: 575px) {
+            margin-bottom: 20px
+        }
+    }
+
+    &__bottom {
+        padding-bottom: 70px;
+
+        @media (max-width: 1200px) {
+            padding-bottom: 60px;
+        }
+
+        @media (max-width: 992px) {
+            padding-bottom: 50px;
+        }
+
+        @media (max-width: 768px) {
+            padding-bottom: 35px;
+        }
+
+        @media (max-width: 575px) {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+
+        @media (max-width: 575px) {
+            display: block;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $grey5;
+        }
+    }
+
+    &__indent {
+        margin-left: 130px;
+        border-bottom: 1px solid $grey5;
+
+        @media (max-width: 575px) {
+            margin-left: 0px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+        color: $title;
+        letter-spacing: 0.2px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    &__date {
+        color: $silver5;
+        font-size: 14px;
+        font-family: $rubik;
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        max-width: 200px;
+
+        @media (max-width: 1200px) {
+            display: block;
+        }
+
+        @media (max-width: 575px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        color: $Coral;
+        margin-bottom: 20px;
+        line-height: 1.8;
+        letter-spacing: -0.1px;
+       @include line-clamp-box(6);
+    }
+
+    &__reply {
+        color: $grey4;
+        font-family: $rubik;
+        font-weight: 400;
+        margin-bottom: 20px;
+        display: inline-block;
+        transition: color 0.5s;
+        letter-spacing: -0.9px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-width: 60px;
+        max-width: 300px;
+
+        &:hover {
+            color: $ac;
+
+            path {
+                fill: $ac;
+
+            }
+        }
+    }
+
+    &__reply-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 60px;
+    }
+
+    &__img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-right: 30px;
+
+        @media (max-width: 768px) {
+            margin-right: 20px;
+        }
+
+        @media (max-width: 575px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__svg {
+        vertical-align: bottom;
+        margin-left: 5px;
+    }
+}

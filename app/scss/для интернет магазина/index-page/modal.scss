@@ -1,0 +1,121 @@
+/*login------------------------------------------------------*/
+.modal {
+    max-width: 500px;
+    margin: 0 auto 120px;
+    width: 100%;
+    display: block;
+    padding: 0 15px;
+
+    @media (max-width: 992px) {
+        margin: 0 auto 100px;
+    }
+
+    @media (max-width: 768px) {
+        margin: 0 auto 70px;
+    }
+
+    @media (max-width: 575px) {
+        margin: 0 auto 40px;
+    }
+
+    &__label {
+        color: $title;
+        font-size: 14px;
+        display: block;
+        transition: color 0.5s;
+        letter-spacing: -0.3px;
+
+        &--checkbox {
+            cursor: pointer;
+            transition: color 0.5s;
+        }
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        border: 1px solid $Smoke;
+        padding: 0 15px;
+        margin: 20px 0 25px 0;
+        height: 60px;
+        transition: background-color 0.5s;
+
+        @media (max-width: 575px) {
+            margin: 20px 0 20px 0;
+        }
+    }
+
+    &__button {
+        background-color: $blue4;
+        color: $white5;
+        font-size: 18px;
+        padding: 20px 20px 20px 20px;
+        margin-bottom: 30px;
+        border: none;
+        width: 100%;
+        transition: background-color 0.5s;
+        text-align: center;
+
+        @media (max-width: 575px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $blue4;
+        line-height: 2;
+
+        @media (max-width: 575px) {
+            display: block;
+            text-align: center;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        margin-bottom: 25px;
+
+        @media (max-width: 575px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        color: $title;
+        transition: background-color 0.5s;
+        line-height: -0.5px;
+        &--text {
+            letter-spacing: -0.2px;
+        }
+    }
+
+    &__btn {
+        color: $title;
+        padding: 20px 20px 20px 20px;
+        border: 1px solid $blue4;
+        background-color: $white;
+        font-size: 18px;
+        width: 100%;
+        transition: background-color 0.5s;
+        text-align: center;
+
+        &:focus {
+            color: $green;
+        }
+
+        &:hover {
+            background-color: $ac;
+        }
+
+        &:active {
+            color: $red;
+        }
+    }
+}

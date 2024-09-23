@@ -1,0 +1,200 @@
+.design {
+    padding-top: 60px;
+
+    @media (max-width: 992px) {
+        padding-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 35px;
+    }
+
+    @media (max-width: 575px) {
+        padding-top: 20px;
+    }
+
+    @media all and (max-width: 1800px) and (orientation: landscape) {
+        padding-top: 20px;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 20px;
+        letter-spacing: 0px;
+        @include line-clamp-box(3);
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -20px 120px;
+
+        @media (max-width: 1800px) {
+            justify-content: center;
+        }
+
+        @media (max-width: 1200px) {
+            margin: 0 0 120px;
+        }
+
+        @media (max-width: 992px) {
+            margin: 0 0 100px;
+        }
+
+        @media (max-width: 768px) {
+            margin: 0 0 70px;
+        }
+
+        @media (max-width: 575px) {
+            margin: 0 0 40px;
+        }
+
+        @media all and (max-width: 1800px) and (orientation: landscape) {
+            margin: 0 0 40px;
+        }
+    }
+
+    &__item {
+        margin: 0 15px 0px;
+        background-color: $white;
+        position: relative;
+        margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+            max-width: 330px;
+            margin: 0 20px 20px;
+        }
+
+        @media (max-width: 575px) {
+            max-width: 100%;
+            padding-top: 10px;
+        }
+
+        &:nth-last-child(-n+3) {
+            margin-bottom: 0px;
+
+            @media (max-width: 992px) {
+                margin-bottom: 30px;
+            }
+
+            @media (max-width: 768px) {
+                margin-bottom: auto;
+            }
+        }
+
+        &:nth-last-child(-n+2) {
+            @media (max-width: 992px) {
+                margin-bottom: auto;
+            }
+        }
+
+        &:not(:last-child) {
+            @media (max-width: 768px) {
+                margin-bottom: 30px;
+            }
+
+            @media (max-width: 575px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .video {
+        height: 55vh;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        background-position: center;
+        position: relative;
+        opacity: 1;
+        margin-bottom: 120px;
+        transition: opacity 0.7s;
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 2px solid transparent;
+
+        @media (max-width: 992px) {
+            margin-bottom: 100px;
+        }
+
+        @media (max-width: 575px) {}
+
+        @media all and (max-width: 1800px) and (orientation: landscape) {
+            margin-bottom: 40px;
+        }
+
+        &:hover {
+            opacity: 0.4;
+            border: 2px solid $black;
+        }
+
+        &__icon {
+            margin: auto;
+        }
+    }
+}
+
+.design-cart {
+    &__text {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        color: $black2;
+        line-height: 1.1;
+        display: block;
+        transition: color 0.5s;
+        letter-spacing: 0px;
+        @include line-clamp-box(3);
+
+        &:hover {
+            color: $ac;
+        }
+
+        @media (max-width: 575px) {
+            left: 15px;
+            top: 25px;
+        }
+
+        @media all and (max-width: 1800px) and (orientation: landscape) {
+            left: 25px;
+        }
+    }
+
+    &__text p {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    &__text span {
+        color: $blue4;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        margin-bottom: 5px;
+        max-width: 175px;
+    }
+
+    &__subtitle,
+    &__text span,
+    &__text p {
+        @include line-clamp-box(1);
+    }
+
+    &__img {
+        max-width: 370px;
+        height: 250px;
+        object-fit: cover;
+        display: grid;
+
+        @media (max-width: 575px) {
+            max-width: 290px;
+            height: 200px;
+        }
+
+        @media all and (max-width: 1800px) and (orientation: landscape) {
+            height: 240px;
+        }
+    }
+}

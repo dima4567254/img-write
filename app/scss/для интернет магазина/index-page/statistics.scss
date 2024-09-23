@@ -1,0 +1,112 @@
+
+.statistics {
+    padding: 0 0 60px;
+
+    @media (max-width: 992px) {
+        padding: 0 0 50px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 0 35px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 0 20px;
+    }
+
+    &__color {
+        background-color: $ac;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+        margin: 0 auto;
+        height: 100%;
+        padding: 80px 20% 80px;
+        flex-wrap: wrap;
+
+        @media (max-width: 1200px) {
+            padding: 80px 5% 80px
+        }
+
+        @media (max-width: 992px) {
+            padding: 35px 15px 35px;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__item {
+        margin-right: 15px;
+        margin-left: 15px;
+        text-align: center;
+        letter-spacing: 0px;
+        min-width: 240px;
+
+        @media (max-width: 575px) {
+            padding: 20px 15px 20px;
+
+        }
+
+        &:not(:last-child) {
+            @media (max-width: 992px) {
+                margin-bottom: 35px;
+            }
+
+            @media (max-width: 575px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        max-width: 300px;
+    }
+
+    &__text p {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    &__text span {
+        line-height: 1.7;
+        font-size: 18px;
+    }
+
+    &__number {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
+
+    &__icon {
+        position: relative;
+        max-width: 65px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: -5px;
+            width: 35px;
+            height: 35px;
+            background-color: rgb(163, 187, 200);
+            border-radius: 50%;
+            opacity: 70%;
+        }
+    }
+}

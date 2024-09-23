@@ -1,0 +1,62 @@
+/*коменты норм*/
+.partners {
+    z-index: 100;
+    padding-top: 180px;
+    background-color: $white3;
+    margin-top: -170px;
+
+    @media (max-width: 1800px) {
+        padding-top: 225px;
+        margin-top: -255px;
+    }
+
+    @media (max-width: 1200px) {
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+
+    @media all and (max-width: 1800px) and (orientation: landscape) {
+        padding-top: 260px;
+        margin-top: -255px;
+    }
+
+    @media all and (max-width: 992px) and (orientation: landscape) {
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+
+
+    &--wraper {
+        padding-top: 0px;
+        margin-top: 0px;
+        background-color: $white3;
+    }
+
+    &__list {
+        padding: 90px 50px 85px;
+        display: flex;
+
+        @media (max-width: 768px) {
+            padding: 35px 20px 35px;
+        }
+
+        @media (max-width: 575px) {
+            padding: 20px 20px 20px;
+        }
+
+        @media all and (max-width: 1800px) and (orientation: landscape) {
+            padding: 100px 50px 100px;
+        }
+    }
+
+    &__img {
+        max-width: 150px;
+        height: 80px;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .slick-track {
+        left: 10px;
+    }
+}

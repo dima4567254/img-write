@@ -1,0 +1,213 @@
+.description-products {
+    padding: 60px 0;
+
+    @media (max-width: 992px) {
+        padding: 50px 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 35px 0;
+    }
+
+    @media (max-width: 575px) {
+        padding: 20px 0;
+    }
+    @media all and (max-width: 1800px) and (orientation: landscape) {
+        padding: 20px 0;
+    }
+
+    &__items {
+        display: flex;
+
+        @media (max-width: 1200px) {
+            display: block;
+        }
+    }
+
+    &__item {
+        background-color: $Cream;
+        padding: 100px 0px;
+        width: calc(100% / 2);
+        position: relative;
+        display: flex;
+
+        @media (max-width: 1800px) {
+            padding: 85px 0px;
+        }
+
+        @media (max-width: 1200px) {
+            width: 100%;
+            padding: 60px 0px;
+        }
+
+        @media (max-width: 992px) {
+            padding: 50px 0px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 35px 0px;
+        }
+
+        @media (max-width: 575px) {
+            padding: 20px;
+        }
+
+        @media all and (max-width: 1800px) and (orientation: landscape) {
+            padding: 25px;
+        }
+
+        @media all and (max-width: 1800px) and (orientation: landscape) {
+            padding: 15px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 30px;
+
+            @media (max-width: 1200px) {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    &__cart {
+        display: flex;
+        margin: 0 auto;
+
+        @media (max-width: 1800px) {
+            justify-content: center;
+        }
+
+        @media (max-width: 575px) {
+            display: block;
+            text-align: center;
+            max-width: 100%;
+        }
+    }
+}
+
+.description-cart {
+    &__img {
+        margin-top: -195px;
+        max-width: 233px;
+        height: 405px;
+        object-fit: cover;
+
+        @media (max-width: 1800px) {
+            margin-top: 0px;
+            max-width: 150px;
+            height: 250px;
+        }
+
+        @media (max-width: 575px) {
+            margin: 0 auto;
+            margin-bottom: 20px;
+            display: flex;
+        }
+
+        @media all and (max-width: 1800px) and (orientation: landscape) {
+            height: 210px;
+        }
+
+        @media all and (max-width: 768px) and (orientation: landscape) {
+            height: 225px;
+        }
+    }
+
+    &__title {
+        max-width: 340px;
+        font-size: 26px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        letter-spacing: 0px;
+        flex-wrap: wrap;
+        color: $default;
+
+        @media (max-width: 575px) {
+            max-width: 100%;
+        }
+
+        @media all and (max-width: 768px) and (orientation: landscape) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__text {
+        line-height: 1.8;
+        max-width: 340px;
+        letter-spacing: 0.4px;
+        margin-left: 20px;
+        color: $default;
+
+        @media (max-width: 1200px) {
+            max-width: 100%;
+            margin-left: 40px;
+            width: 340px;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 300px;
+        }
+
+        @media (max-width: 575px) {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    &__text p {
+        margin-bottom: 20px;
+        color: $default;
+        @include line-clamp-box(5);
+        font-family: $rubik;
+        font-weight: 400;
+        letter-spacing: 0.1px;
+
+        @media all and (max-width: 768px) and (orientation: landscape) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__link {
+        padding: 16px 17px 16px 22px;
+        background-color: $Cream;
+        color: $title;
+        font-family: $rubik;
+        font-weight: 400;
+        font-size: 15px;
+        border-radius: 5px;
+        border-color: $silver2;
+        border: 1px solid $silver2;
+        outline-color: $black;
+        letter-spacing: 0.1px;
+        display: inline-block;
+        transition: border-color 0.5s;
+        max-width: 340px;
+        min-width: 180px;
+
+        @media (max-width: 768px) {
+            max-width: 300px;
+        }
+
+        @media (max-width: 575px) {
+            max-width: 245px;
+        }
+
+        &:hover {
+            border-color: $orange;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__box {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+    }
+
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js?_v=20240919205500"></script>
+  <title></title>
+  <link rel="stylesheet" href="css/style.min.css?_v=20230727015200">
+  <style>
+    #image-container img {
+      max-width: 100px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+
+
+<!-- <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+<!-- node server.js -->
+
+
+
+
+
+
+<body class="body">
+  <h1>Галерея изображений</h1>
+  
+  <div id="image-container">
+    <img class="__img" src="images/01(1).png" alt="">
+    <img class="__img" src="images/01(3).png" alt="">
+    <img class="__img" src="images/01(4).png" alt="">
+    <img class="__img" src="images/01(5).png" alt="">
+    <img class="__img" src="images/01(6).png" alt="">
+    <img class="__img" src="images/01(7).png" alt="">
+    <img class="__img" src="images/01(9).png" alt="">
+    <img class="__img" src="images/03(8).png" alt="">
+    <img class="__img" src="images/04(9).png" alt="">
+    <img class="__img" src="images/25(2).png" alt="">
+    <img class="__img" src="images/pac/01(2).png" alt="">
+  </div>
+
+  <!-- Скрытый элемент для хранения пути к изображению -->
+  <!-- <input type="text" id="image-path" value=","> -->
+  <!-- <input type="hidden" id="image-path" value=""> -->
+
+
+  <!-- 1 запускаем сервер он должен считать и передать пути -->
+  <!-- 2 запускаем галп  -->
+  <!-- 3 gulpfile.js сохроняет пути в файл-->
+  <!--4 app.js считывает пути и создает уже тег ig с путем-->
+
+  <script>
+    // // Функция для отображения изображений
+    // function displayImages(images) {
+    //   const imageContainer = document.getElementById('image-container');
+    //   imageContainer.innerHTML = ''; // Очищаем контейнер перед добавлением
+
+    //   images.forEach(imageText => {
+    //     const imgElement = document.createElement('img');
+    //     imgElement.src = `${imageText}`; // Путь к изображению
+    //     imgElement.alt = imageText;
+    //     imageContainer.appendChild(imgElement);
+    //   });
+    // }
+
+    // // Получаем изображения с сервера
+    // axios.get('http://localhost:3002/api/images')
+    //   .then(response => {
+    //     const imageArray = response.data;
+
+    //     if (imageArray.length > 0 && typeof imageArray[0] === 'string') {
+    //       // Сохраняем пути изображений в Local Storage
+    //       imageArray.forEach((imagePath, index) => {
+    //         localStorage.setItem(`imagePath_${index}`, imagePath);  // Сохраняем каждый путь под уникальным ключом
+    //         console.error(imageArray[0], imageArray[1], 'пути');
+    //       });
+
+    //       // Отображаем изображения
+    //       displayImages(imageArray);
+    //       console.log('Пути к изображениям успешно сохранены в Local Storage.');
+    //     } else {
+    //       console.error('Ошибка: массив изображений пуст или содержит неверные данные.');
+    //     }
+    //   })
+    //   .catch(error => {
+    //     console.error('Ошибка при запросе изображений:', error);
+    //   });
+
+  </script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js?_v=20240919200518"></script> -->
+  <script src="js/avif.js?_v=20240720193230"></script>
+  <script src="js/main.min.js?_v=20230727015200"></script>
+
+
+
+
+
+
+</body></html>

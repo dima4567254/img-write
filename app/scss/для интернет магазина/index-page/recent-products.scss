@@ -1,0 +1,64 @@
+/*продукт 1 блок с картинкой и звездами*/
+.recent-products {
+    &__list {
+        @media (max-width: 768px) {
+            padding-bottom: 35px;
+        }
+
+        @media (max-width: 575px) {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        font-size: 14px;
+        color: $black;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-bottom: 35px;
+
+            @media (max-width: 575px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__img {
+        transition: opacity 0.5s;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        transition: color 0.3s;
+        letter-spacing: 0px;
+        @include line-clamp-inline(1);
+        font-weight: 400;
+        max-width: 150px;
+    }
+
+    &__star {
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        margin-right: 20px;
+        transition: color 0.3s;
+        font-size: 15px;
+        color: $black6;
+        font-weight: 400;
+        font-family: $rubik;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        max-width: 150px;
+        padding-top: 5px;
+        margin-bottom: 10px;
+    }
+}
